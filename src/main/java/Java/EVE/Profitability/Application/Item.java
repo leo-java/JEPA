@@ -11,12 +11,10 @@ public class Item {
     private int id;
     private String price;
     private String requiredMaterials;
+    private String buildCost;
 
     public Item(String name) {
         this.name = capitalizeString(name);
-        this.id = id;
-        this.price = price;
-        this.requiredMaterials = requiredMaterials;
     }
 
     public String getName() {
@@ -35,6 +33,10 @@ public class Item {
         return requiredMaterials;
     }
 
+    public String getBuildCost() {
+        return buildCost;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -49,6 +51,10 @@ public class Item {
 
     public void setRequiredMaterials(String requiredMaterials) {
         this.requiredMaterials = requiredMaterials;
+    }
+
+    public void setBuildCost(String buildCost){
+        this.buildCost = buildCost;
     }
 
     private static String capitalizeString(String input){
