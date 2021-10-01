@@ -13,11 +13,14 @@ import java.util.Locale;
 
 public class Selenium {
 
+    // It usually works, if you get a long list of errors it's probably because firefox was slow, so try again
+
     public static void main(String[] args) throws InterruptedException {
-        String location = "Jita";
+        String location = "jita";
         FirefoxDriver driver = openDriver();
         openNewSite(driver,"https://evemarketer.com/");
-        Item item = new Item("heron");
+        Item item = new Item("devoter" +
+                "");
         searchEveMarketerForItem(driver,item.getName());
         item.setId(getIDFromURL(driver,item));
         item.setPrice(getPriceFromEveMarketer(driver,location));
